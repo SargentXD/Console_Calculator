@@ -4,22 +4,50 @@
 #include <cmath>
     
 int main() {
-    double a;
-    double b;
-    double c;
 
-    std::cout << "Enter side a: ";
-    std::cin >> a;
+    char op;
+    double num1, num2, result;
 
-    std::cout << "Enter side b: ";
-    std::cin >> b;
+    std::cout << "------------------------------------";
+    std::cout << "Enter an operator (+, -, *, /, ^,)";
+    std::cin >> op;
 
-    std::cout << "Enter side c: ";
-    std::cin >> c;
+    std::cout << "Enter 1st operand: ";
+    std::cin >> num1;
+    
+    std::cout << "Enter 2nd operand: ";
+    std::cin >> num2;
 
-    c = sqrt(pow(a,2) + pow(b,2));
+    switch (op) {
+        case '+':
+        result = num1 + num2;
+        std::cout << "Result = " << result << '\n';
+        break;
+        
+        case '-':
+        result = num1 - num2;
+        std::cout << "Result = " << result << '\n';
+        break;
+        
+        case '*':
+        result = num1 * num2;
+        std::cout << "Result = " << result << '\n';
+        break;
+        
+        case '/':
+        result = num1 / num2;
+        std::cout << "Result = " << result << '\n';
+        break;
+        
+        default:
+        std::cout << "Wasent a valid response" << '\n';
+        break;
+        
+    }
+    
 
-    std::cout << "The hypotenuse is: " << c << std::endl;
+    std::cout << "------------------------------------";
+    
 
     return 0;
     
